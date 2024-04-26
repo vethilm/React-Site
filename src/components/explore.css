@@ -1,0 +1,25 @@
+/* Container for the grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); 
+  grid-gap: 10px; 
+  padding: 10px;
+ }
+ 
+
+ .row {
+  padding: 0 4px;/* Allows the row to act as a pass-through for its children */
+ }
+
+ .column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+ }
+ 
+  
+  .card-img  {
+    margin-top: 20px;
+    vertical-align: middle;
+    width: 100%;
+  }
