@@ -1,10 +1,10 @@
 import "./cards.css";
 
-function ThumbnailCard({ title, src }) {
+function ThumbnailCard({ src, key }) {
   return (
     <>
       <div className="card-sm">
-        <img className="card-img" src={src} alt={title} />
+        <img className="card-img" src={src} alt={key} />
       </div>
     </>
   );
