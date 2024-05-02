@@ -1,4 +1,4 @@
-import ThumbnailCard from "./ThumbnailCard";
+import ExplorePage from "./ExplorePage";
 import "./cards.css";
 import imageList from "./imageOrganizer";
 import { useParams } from "react-router-dom";
@@ -20,8 +20,8 @@ function OverlayCard() {
   console.log(image);
   return (
     <>
-      <div className="overlay">
-        <ThumbnailCard size="card-lg" image={image}></ThumbnailCard>
+      <div className="main">
+        <img src={image.src}></img>
         <div className="card-info">
           <p className="card-sm-title">title</p>
           <p className="card-sm-title">username</p>

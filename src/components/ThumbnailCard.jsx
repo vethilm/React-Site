@@ -1,7 +1,7 @@
 import "./cards.css";
 import { Link } from "react-router-dom";
 
-function ThumbnailCard({ onClick, image, size }) {
+function ThumbnailCard({ image, size }) {
   return (
     <>
       <div className={size}>
