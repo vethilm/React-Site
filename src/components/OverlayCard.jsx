@@ -1,6 +1,7 @@
 import "./cards.css";
 import imageList from "./imageOrganizer";
 import { useParams } from "react-router-dom";
+import ExplorePage from "./ExplorePage";
 
 function findImage(id) {
   var found = null;
@@ -24,6 +25,8 @@ function OverlayCard() {
           <p className="card-sm-title">username</p>
         </div>
       </div>
+      <h2>Discover More </h2>
+      <ExplorePage />
     </>
   );
 }
