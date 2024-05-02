@@ -2,6 +2,7 @@ import React from "react";
 import ThumbnailCard from "./ThumbnailCard";
 import "./explore.css";
 import OverlayCard from "./OverlayCard";
+import {Route, Routes } from 'react-router-dom';
 import { useState } from "react";
 
 function ExplorePage() {
@@ -16,15 +17,19 @@ function ExplorePage() {
 
  const images = require.context("../cardImages", true);
  const imageList = images.keys().map(image => {
-   const titleArray = image.split('/')
+  const titleArray = image.split('/')
    return{
      src:images(image),
      title:titleArray[titleArray.length-1],
    }
  })
- 
+ function randID() {
+  const min = 1000000000;
+  const max = 9999999999;
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+ }
  function fillPage() {
-   var columns = 6;
+   var columns = 7;
    var rows = Math.floor(imageList.length/columns);
    var imgObjects =[];
    var colObjects = [];
@@ -38,25 +43,21 @@ function ExplorePage() {
          colObjects=[];
          imgObjects=[]
        }
+       var id =randID();
        // add image to the column
-         imgObjects.push(<ThumbnailCard  onClick={previewImg} image={imageList[i]} size="card-sm"/>);
+         imgObjects.push(
+          <ThumbnailCard  onClick={previewImg} image={imageList[i]} size="card-sm" id={id}/>
+          );
    }
  return rowObjects;
  }
 
  const items=fillPage();
- if(overlayDisplay){
-  return(
-    <OverlayCard display={overlayDisplay} selectedImage={selected}/> 
-  )
- }
- else{
   return (
     <div className="grid">
-       {items}
+        {items}
     </div>
  )
 }
-}
-
+// <OverlayCard display={overlayDisplay} selectedImage={selected}/> 
 export default ExplorePage;
