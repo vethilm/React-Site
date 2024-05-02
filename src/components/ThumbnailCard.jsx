@@ -1,10 +1,11 @@
 import "./cards.css";
 
-function ThumbnailCard({ src, key }) {
+function ThumbnailCard({ onClick, image, size }) {
   return (
     <>
-      <div className="card-sm">
-        <img className="card-img" src={src} alt={key} />
+      <div className={size} onClick={() => onClick(image)}>
+        <img className="card-img" src={image.src} alt={image.title} />
+        <p className="card-sm-title">{image.title}</p>
       </div>
     </>
   );

@@ -1,12 +1,13 @@
-import React, { useRef, useState}  from 'react';
 import './App.css';
 import LandingPage from './components/Landingpage';
-import Header from './components/Header';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
 import 'firebase/compat/auth';
-
+import Header from './components/Header';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import {Route, Routes } from 'react-router-dom';
+import ExplorePage from './components/ExplorePage';
+import About from './components/About'
 
 firebase.initializeApp({
   apiKey: "AIzaSyDVPWay2Gc8lPznuSeIpoobRtT1LvUbeB0",
@@ -25,16 +26,20 @@ function App() {
   const [user] = useAuthState(auth);
 
   return (
-    <div className="App">
-      <header>
-        <SignOut />
-      </header>
 
-      <section>
-        {user ? <LandingPage  /> : <SignIn />}
+    <div className="App">
+           <section>
+        {user ? <Header  /> : <SignIn />}
+        <SignOut />
       </section>
+      <Routes>
+        <Route path ="/" element={<About/>}></Route>
+        <Route path ="/explore" element={<ExplorePage/>}></Route>
+      </Routes>
+ 
 
     </div>
+
   );
 }
 

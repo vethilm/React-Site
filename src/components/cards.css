@@ -1,8 +1,44 @@
 .card-sm{
     width: 100%;
     vertical-align: middle;
+    margin: 0px 0px 10px 0px;
+    cursor: zoom-in;
+}
+.card-sm:hover{
+    cursor: pointer;
+}
+.card-img:hover{
+    filter:brightness(.7)
+}
+
+
+.card-sm-title{
+    text-align: left;
+    margin: 6px 0px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 .card-img{
-    border-radius: 5px;
+    border-radius: 8px;
     width: 100%;
+}
+
+/* overlay card */
+
+.overlay{
+    display: flex;
+    flex-direction: row;
+    width:  60%;
+    align-content: center;
+    margin: 0px auto;
+    background-color: white;
+    border-radius: 5%;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.082));
+}
+.card-lg{
+    width: 50%;
+    overflow: hidden;
+    margin: 0px;
+}
+.card-info{
+
 }
