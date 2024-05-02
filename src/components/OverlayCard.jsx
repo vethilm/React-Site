@@ -1,4 +1,3 @@
-import ExplorePage from "./ExplorePage";
 import "./cards.css";
 import imageList from "./imageOrganizer";
 import { useParams } from "react-router-dom";
@@ -15,9 +14,7 @@ function findImage(id) {
 
 function OverlayCard() {
   const { id } = useParams();
-  console.log(id);
   const image = findImage(id);
-  console.log(image);
   return (
     <>
       <div className="main">

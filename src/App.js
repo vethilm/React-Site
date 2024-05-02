@@ -29,7 +29,7 @@ function App() {
     <div className="App">
            <section>
         {user ? <Header  /> : <SignIn />}
-        <SignOut />
+        
       </section>
       <Routes>
         <Route path ="/" element={<ExplorePage/>}></Route>
@@ -54,7 +54,7 @@ function SignIn() {
   )
 }
 
-function  SignOut() {
+export function  SignOut() {
   return auth.currentUser && (
     <button className='sign-out' onClick={() => auth.signOut()}>Sign Out</button>
   )

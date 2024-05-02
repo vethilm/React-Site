@@ -1,18 +1,9 @@
 import React from "react";
 import ThumbnailCard from "./ThumbnailCard";
 import "./explore.css";
-import { useState } from "react";
 import imageList from "./imageOrganizer";
 
 function ExplorePage() {
-  const [overlayDisplay, setOverlay] = useState(null);
-  const [selected, setSelected] = useState(null);
-  // function previewImg(image){
-  //   setSelected(image)
-  //   console.log(image)
-  //   setOverlay(overlayDisplay? false:true);
-  // }
-
  function fillPage() {
    var columns = 7;
    var rows = Math.floor(imageList.length/columns);
