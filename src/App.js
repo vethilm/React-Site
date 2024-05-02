@@ -6,6 +6,7 @@ import Header from './components/Header';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import {Route, Routes } from 'react-router-dom';
 import ExplorePage from './components/ExplorePage';
+import OverlayCard from './components/OverlayCard';
 
 firebase.initializeApp({
   apiKey: "AIzaSyDVPWay2Gc8lPznuSeIpoobRtT1LvUbeB0",
@@ -33,8 +34,8 @@ function App() {
       <Routes>
         <Route path ="/" element={<ExplorePage/>}></Route>
         <Route path ="/explore" element={<ExplorePage/>}></Route>
+        <Route path ="/image/:id" element={<OverlayCard />}></Route>
       </Routes>
- 
 
     </div>
 

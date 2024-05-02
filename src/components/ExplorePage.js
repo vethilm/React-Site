@@ -1,33 +1,18 @@
 import React from "react";
 import ThumbnailCard from "./ThumbnailCard";
 import "./explore.css";
-import OverlayCard from "./OverlayCard";
-import {Route, Routes } from 'react-router-dom';
 import { useState } from "react";
+import imageList from "./imageOrganizer";
 
 function ExplorePage() {
-
   const [overlayDisplay, setOverlay] = useState(null);
   const [selected, setSelected] = useState(null);
-  function previewImg(image){
-    setSelected(image)
-    console.log(image)
-    setOverlay(overlayDisplay? false:true);
-  }
+  // function previewImg(image){
+  //   setSelected(image)
+  //   console.log(image)
+  //   setOverlay(overlayDisplay? false:true);
+  // }
 
- const images = require.context("../cardImages", true);
- const imageList = images.keys().map(image => {
-  const titleArray = image.split('/')
-   return{
-     src:images(image),
-     title:titleArray[titleArray.length-1],
-   }
- })
- function randID() {
-  const min = 1000000000;
-  const max = 9999999999;
-  return Math.floor(Math.random() * (max - min + 1)) + min;
- }
  function fillPage() {
    var columns = 7;
    var rows = Math.floor(imageList.length/columns);
@@ -43,10 +28,13 @@ function ExplorePage() {
          colObjects=[];
          imgObjects=[]
        }
-       var id =randID();
+       
        // add image to the column
          imgObjects.push(
-          <ThumbnailCard  onClick={previewImg} image={imageList[i]} size="card-sm" id={id}/>
+          <ThumbnailCard  
+          // onClick={previewImg} 
+          image={imageList[i]} 
+          size="card-sm" />
           );
    }
  return rowObjects;
