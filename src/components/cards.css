@@ -38,5 +38,36 @@
 .card-lg{
     height: 100%;
     margin: 0px;
-    border: 1px solid red
+}
+
+.card-info{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    border:1px solid red;
+    align-items:flex-start;
+    margin:30px
+}
+.card-title{
+    font-size: 2vw;
+    margin: 0px;
+    border: 1px solid teal;
+    margin-bottom: 30px;
+}
+.card-username{
+    font-size: 1vw;
+    margin:0px;
+    border:1px solid orange
+}
+.card-desc{
+    text-align: left;
+}
+.saveBtn{
+    background-color:#212Fa7;
+    color: white;
+    border-radius: 20px;
+    margin:5px
+}
+.saveBtn:hover{
+    background-color:#171c49;
 }
