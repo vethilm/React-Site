@@ -1,8 +1,73 @@
 .card-sm{
     width: 100%;
     vertical-align: middle;
+    margin: 0px 0px 10px 0px;
+    cursor: zoom-in;
+}
+.card-sm:hover{
+    cursor: pointer;
+}
+.card-img:hover{
+    filter:brightness(.7)
+}
+
+
+.card-sm-title{
+    text-align: left;
+    margin: 6px 0px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 .card-img{
-    border-radius: 5px;
+    border-radius: 8px;
     width: 100%;
+}
+
+/* overlay card */
+
+.main{
+    display: flex;
+    flex-direction: col;
+    width:  60%;
+    align-content: center;
+    margin: 50px auto;
+    background-color: white;
+    border-radius: 30px;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.27));
+    overflow: hidden;
+}
+.card-lg{
+    height: 100%;
+    margin: 0px;
+}
+
+.card-info{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    border:1px solid red;
+    align-items:flex-start;
+    margin:30px
+}
+.card-title{
+    font-size: 2vw;
+    margin: 0px;
+    border: 1px solid teal;
+    margin-bottom: 30px;
+}
+.card-username{
+    font-size: 1vw;
+    margin:0px;
+    border:1px solid orange
+}
+.card-desc{
+    text-align: left;
+}
+.saveBtn{
+    background-color:#212Fa7;
+    color: white;
+    border-radius: 20px;
+    margin:5px
+}
+.saveBtn:hover{
+    background-color:#171c49;
 }

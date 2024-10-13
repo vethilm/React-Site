@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    max-width: 220vh;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .header {
+    background-color: #fff;
+    color:#1c1b1b;
+    padding: 20px;
+    text-align: center;
+  }
+  .midText{
+      padding-left:30%;
+      padding-right:30%;
+    
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  .pin {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 10px 10px 20px grey;
+  }
+
+  .pin img {
+    max-width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  
+  }
+
+  .pin .info {
+    padding: 10px;
+  }
+
+  .pin .info h3 {
+    margin: 0;
+    font-size: 18px;
+  }
+
+  .pin .info p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #666;
+  }
+
+  .footer {
+    background-color: #e7e3e3;
+    color:#1c1b1b;
+    padding: 20px;
+    text-align: center;
+  }
+
+  h1{
+      font-size: 8vh;
+  }
+
+  .logolong{
+      max-height: 200px;
+  }
+
+  .container2 {
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #212fa7;
+      color: #fff;
+
+  }
+  
+  .row{
+   display: flex;
+   flex-wrap: wrap;
+   max-width: 100%;
+  }
+   
+  .col-lg-4{
+      padding-left:10%;
+      max-width: 20%;
+      text-align: center;
+  }
+  
+  .container3 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    color: #1c1b1b;
+   
+
+  }
+  .col-left{
+      max-width: 40%;
+      padding-right:10%
+  }
+
+  .col-right{
+    max-width:50%;
+    max-height:50%;
+  } 
+
+  .img-right{
+    max-width:65%;
+    padding-left:20%;
+  }
+ .personImg{
+  max-width: 70%;
+  border-radius: 50%;
+  box-shadow: 20px 20px 50px grey;
+  
+ }

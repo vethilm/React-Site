@@ -14,12 +14,6 @@
  .column {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; 
+  justify-content: flex-start; 
  }
  
-  
-  .card-img  {
-    margin-top: 20px;
-    vertical-align: middle;
-    width: 100%;
-  }
